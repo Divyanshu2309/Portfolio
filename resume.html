@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1230AE, #848485, #3f23df);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .resume-container {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transform: scale(0.9);
+            animation: zoomIn 1s ease-in-out forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .resume-preview {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #061ce8;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1);
+            background: #6f5be0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #FF007F;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: #E6006B;
+        }
+
+        /* Back Arrow Button */
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 14px;
+            border-radius: 50%;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-arrow:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-arrow">&#8592;</a>
+    <h2>My Resume</h2>
+    <div class="resume-container">
+        <img src="src/images/your_resume.png" alt="Resume Preview" class="resume-preview">
+    </div>
+
+    <a href="src/your-resume.pdf" download class="download-btn">Download Resume</a>
+
+
+</body>
+
+</html>
